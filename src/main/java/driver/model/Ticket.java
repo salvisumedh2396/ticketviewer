@@ -29,6 +29,14 @@ public class Ticket {
     private String updatedAt;
     private String url;
     protected Via via;
+    private long forumTopicId;
+    private boolean isPublic;
+    private String[] fields;
+    private long[] followupIds;
+    private long brandId;
+    private boolean allowChannelback;
+    private boolean allowArrachments;
+
 
     public Ticket() {
     }
