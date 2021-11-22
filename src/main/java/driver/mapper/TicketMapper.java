@@ -8,6 +8,8 @@ import org.json.JSONArray;
 
 public class TicketMapper {
 
+    private static final int maxPageLimit = 25;
+
     public Ticket parseOneTicket(String jsonContent){
         try{
             JSONObject ticketEntities = new JSONObject(jsonContent);
@@ -26,7 +28,43 @@ public class TicketMapper {
 
     public ProcessedTicketList parseAllTickets(String jsonResponse){
 
-        return new ProcessedTicketList();
+        ProcessedTicketList processedTicketList = new ProcessedTicketList();
+
+        try{
+            JSONObject jsonTicketsObject = new JSONObject(jsonResponse);
+            JSONArray jsonTicketArray = jsonTicketsObject.optJSONArray("tickets");
+
+            if(jsonTicketArray.length()==0){
+                System.out.println("No records were found");
+                return null;
+            }
+
+            if(jsonTicketArray.length() < maxPageLimit){
+                processedTicketList.tickets = new Ticket[jsonTicketArray.length()];
+            }else{
+                processedTicketList.tickets = new Ticket[maxPageLimit];
+            }
+
+            for(int i =0; i < jsonTicketArray.length() && i<maxPageLimit; i++){
+
+                JSONObject singleTicketJson = jsonTicketArray.getJSONObject(i);
+                Ticket parsedTicket = jsonToTicketMapper(singleTicketJson);
+
+                if(parsedTicket == null){
+                    System.out.println("Record could not be parsed");
+                    return null;
+                }
+
+                processedTicketList.tickets[i] = parsedTicket;
+            }
+
+            paginationCheck(processedTicketList, jsonTicketsObject);
+            return processedTicketList;
+
+        }catch (Exception e){
+            System.out.println("Interval server error");
+            return null;
+        }
     }
 
     public Ticket jsonToTicketMapper(JSONObject ticketContent){
@@ -95,4 +133,22 @@ public class TicketMapper {
 
         return ticket;
     }
+
+    private void paginationCheck(ProcessedTicketList processedTicketList, JSONObject jsonTicketObject){
+        String nextPageUrl = jsonTicketObject.optString("next_page");
+        String previousPageUrl = jsonTicketObject.optString("previous_page");
+
+        if(nextPageUrl == null){
+            processedTicketList.isNext = false;
+        }else{
+            processedTicketList.isNext = true;
+        }
+
+        if(previousPageUrl == null){
+            processedTicketList.isPrevious = false;
+        }else{
+            processedTicketList.isPrevious = true;
+        }
+    }
+
 }

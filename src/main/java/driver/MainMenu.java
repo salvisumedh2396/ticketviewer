@@ -56,6 +56,26 @@ public class MainMenu {
                         getPage(pageNo);
                         break;
                     }
+                    case "n":
+                    {
+                        if(isNext != false){
+                            pageNo++;
+                            getPage(pageNo);
+                        }else{
+                            System.out.println("Cannot go to the next page. Limit reached");
+                        }
+                        break;
+                    }
+                    case "p":
+                    {
+                        if(isPrevious != false && pageNo>1){
+                            pageNo--;
+                            getPage(pageNo);
+                        }else{
+                            System.out.println("Cannot go to previous page.");
+                        }
+                        break;
+                    }
                     case "back":
                     {
                         displayMenu = true;
@@ -85,7 +105,15 @@ public class MainMenu {
         }
         isNext = processedTicketList.isNext;
         isPrevious = processedTicketList.isPrevious;
-        displayMenu();
+        paginationMenu();
+    }
+
+    private static void paginationMenu(){
+        displayMenu = false;
+        System.out.println("\nEnter 'n' to move to next page");
+        System.out.println("Enter 'p' to move to previous page");
+        System.out.println("Enter '1' to view single ticket details");
+        System.out.println("Enter 'back' to go to the main menu");
     }
 
     private static void displayMenu(){

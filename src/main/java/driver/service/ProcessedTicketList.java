@@ -8,7 +8,7 @@ public class ProcessedTicketList {
 
     public boolean isPrevious = false;
     public boolean isNext = false;
-    private Ticket[] tickets;
+    public Ticket[] tickets;
 
     private static String ENDPOINT = "/api/v2/tickets.json";
 
@@ -35,6 +35,9 @@ public class ProcessedTicketList {
             this.tickets = processedTicketList.tickets;
             this.isNext = processedTicketList.isNext;
             this.isPrevious = processedTicketList.isPrevious;
+
+            for(int i=0; i<tickets.length; i++)
+                System.out.println(tickets[i]);
 
             return "SUCCESS";
         }
