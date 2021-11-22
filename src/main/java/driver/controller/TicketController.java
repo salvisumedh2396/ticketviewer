@@ -34,7 +34,7 @@ public class TicketController {
     }
 
     private void displayInformation(Ticket ticket) {
-
+        System.out.println(ticket.toString());
     }
 
 }

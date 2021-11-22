@@ -1,5 +1,7 @@
 package driver.model;
 
+import java.util.Arrays;
+
 public class Ticket {
 
     private long assigneeId = 0;
@@ -285,5 +287,45 @@ public class Ticket {
 
     public void setVia(Via via) {
         this.via = via;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "assigneeId=" + assigneeId +
+                ", collaboratorsIds=" + Arrays.toString(collaboratorsIds) +
+                ", createdAt='" + createdAt + '\'' +
+                ", customFields=" + customFields +
+                ", description='" + description + '\'' +
+                ", dueAt='" + dueAt + '\'' +
+                ", externalId='" + externalId + '\'' +
+                ", followerIds=" + Arrays.toString(followerIds) +
+                ", groupId=" + groupId +
+                ", hasIncidents=" + hasIncidents +
+                ", id=" + id +
+                ", organizationId=" + organizationId +
+                ", priority='" + priority + '\'' +
+                ", problemId=" + problemId +
+                ", rawSubject='" + rawSubject + '\'' +
+                ", recipient='" + recipient + '\'' +
+                ", requestorId=" + requestorId +
+                ", satisfactionRating=" + satisfactionRating +
+                ", sharingAgreementIds=" + Arrays.toString(sharingAgreementIds) +
+                ", status='" + status + '\'' +
+                ", subject='" + subject + '\'' +
+                ", submitterId=" + submitterId +
+                ", tags=" + Arrays.toString(tags) +
+                ", type='" + type + '\'' +
+                ", updatedAt='" + updatedAt + '\'' +
+                ", url='" + url + '\'' +
+                ", via=" + via +
+                ", forumTopicId=" + forumTopicId +
+                ", isPublic=" + isPublic +
+                ", fields=" + Arrays.toString(fields) +
+                ", followupIds=" + Arrays.toString(followupIds) +
+                ", brandId=" + brandId +
+                ", allowChannelback=" + allowChannelback +
+                ", allowArrachments=" + allowArrachments +
+                '}';
     }
 }

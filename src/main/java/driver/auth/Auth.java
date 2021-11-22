@@ -5,8 +5,8 @@ import java.io.*;
 import java.util.Base64;
 
 public class Auth {
-    private static final String USERNAME = "";
-    private static final String PASSWORD = "";
+    private static final String USERNAME = "ssalvi@ncsu.edu";
+    private static final String PASSWORD = "cadillac2396";
     private static final String SUBDOMAIN = "https://zcctcviewer.zendesk.com";
     public static int responseCode = 0;
 
