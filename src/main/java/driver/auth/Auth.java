@@ -5,9 +5,9 @@ import java.io.*;
 import java.util.Base64;
 
 public class Auth {
-    public static final String USERNAME = "ssalvi@ncsu.edu";
-    public static final String PASSWORD = "cadillac2396";
-    public static final String SUBDOMAIN = "https://zcctcviewer.zendesk.com";
+    private static final String USERNAME = "";
+    private static final String PASSWORD = "";
+    private static final String SUBDOMAIN = "https://zcctcviewer.zendesk.com";
     public static int responseCode = 0;
 
     public String requestResponse(String url, String urlParams){
@@ -63,7 +63,7 @@ public class Auth {
         }
     }
 
-    private String displayErrorMessage(int responseCode) {
+    public static String displayErrorMessage(int responseCode) {
         switch(responseCode)
         {
             case 400:
