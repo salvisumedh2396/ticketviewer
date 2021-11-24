@@ -36,9 +36,6 @@ public class ProcessedTicketList {
             this.isNext = processedTicketList.isNext;
             this.isPrevious = processedTicketList.isPrevious;
 
-            /*for(int i=0; i<tickets.length; i++)
-                System.out.println(tickets[i]);*/
-
             return "SUCCESS";
         }
 
