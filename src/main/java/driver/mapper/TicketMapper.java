@@ -123,14 +123,6 @@ public class TicketMapper {
             }
         }
 
-        /*JSONArray collabids = ticketContent.optJSONArray("collaborator_ids");
-        long[] collabArr = new long[collabids.length()];
-        if(collabids.length()!=0){
-            for(int collabid = 0; collabid < collabids.length(); collabid++){
-                collabArr[collabid] = collabids.optLong(collabid);
-            }
-        }*/
-
         return ticket;
     }
 
