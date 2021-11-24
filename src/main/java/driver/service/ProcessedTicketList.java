@@ -21,6 +21,7 @@ public class ProcessedTicketList {
         }
 
         Auth httpRequest = new Auth();
+        httpRequest.getCredentials();
         String parameters = "?page=" + pageNo + "&per_page=" + perPageLimit;
         String jsonResponse = httpRequest.requestResponse(ENDPOINT, parameters);
 

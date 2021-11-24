@@ -3,6 +3,8 @@ package TestDriver.Auth;
 import driver.auth.Auth;
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.junit.Assert.assertEquals;
 
 public class AuthTest {
@@ -26,6 +28,12 @@ public class AuthTest {
         Auth invalidRequest = new Auth();
         String response = invalidRequest.requestResponse("/api/v2/tickets/1111.json",null);
         assertEquals("Not Found - very few people reach this page..!!",response);
+    }
+
+    @Test
+    public void getCredentials() throws IOException {
+        Auth auth = new Auth();
+        auth.getCredentials();
     }
 
 }
