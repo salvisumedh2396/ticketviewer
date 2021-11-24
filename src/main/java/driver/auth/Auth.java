@@ -3,17 +3,56 @@ package driver.auth;
 import java.net.*;
 import java.io.*;
 import java.util.Base64;
+import java.util.Date;
+import java.util.Properties;
 
 public class Auth {
-    private static final String USERNAME = "";
-    private static final String PASSWORD = "";
-    private static final String SUBDOMAIN = "";
+
     public static int responseCode = 0;
+
+    private static String userName = "";
+    private static String password = "";
+    private static String subDomain = "";
+    InputStream inputStream;
+
+    public void getCredentials(){
+
+        try {
+            Properties prop = new Properties();
+            String propFileName = "cred.properties";
+
+            inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+
+            if (inputStream != null) {
+                prop.load(inputStream);
+            } else {
+                throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
+            }
+
+            Date time = new Date(System.currentTimeMillis());
+
+            // get the property value and print it out
+            userName = prop.getProperty("username");
+            password = prop.getProperty("password");
+            subDomain = prop.getProperty("domain");
+
+            //String result = "Company List = " + userName + ", " + password + ", " + subDomain;
+            //System.out.println(result + "\nProgram Ran on " + time + " by user=" + userName);
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+        } finally {
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                System.out.println("Exception: " + e.getMessage());
+            }
+        }
+    }
 
     public String requestResponse(String url, String urlParams){
 
         HttpURLConnection connection = null;
-        String finalUrl = SUBDOMAIN + url;
+        String finalUrl = subDomain + url;
 
         try{
             URL urlObject = new URL(finalUrl + urlParams);
@@ -23,18 +62,17 @@ public class Auth {
             Authenticator.setDefault(new Authenticator() {
                 @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication(USERNAME, PASSWORD.toCharArray());
+                    return new PasswordAuthentication(userName, password.toCharArray());
                 }
             });
 
-            byte[] message = (USERNAME+ ":" + PASSWORD).getBytes("UTF-8");
+            byte[] message = (userName+ ":" + password).getBytes("UTF-8");
             String encoded = Base64.getEncoder().encodeToString(message);
             connection.setRequestProperty("Authorization", "Basic " + encoded);
 
             connection.setDoOutput(true);
             connection.setRequestMethod("GET");
 
-            //Get response
             responseCode = connection.getResponseCode();
             if (responseCode < 300 && responseCode > 199)
             {

@@ -16,6 +16,7 @@ public class TicketController {
 
         System.out.println("\nProcessing your request, please wait...");
         Auth httpRequest = new Auth();
+        httpRequest.getCredentials();
         String url = ENDPOINT + id + ".json";
         String response = httpRequest.requestResponse(url, null);
         //Request success - 200 or 300 range
