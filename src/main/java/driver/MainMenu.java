@@ -63,6 +63,7 @@ public class MainMenu {
                             getPage(pageNo);
                         }else{
                             System.out.println("Cannot go to the next page. Limit reached");
+                            paginationMenu();
                         }
                         break;
                     }
@@ -73,6 +74,7 @@ public class MainMenu {
                             getPage(pageNo);
                         }else{
                             System.out.println("Cannot go to previous page.");
+                            paginationMenu();
                         }
                         break;
                     }
@@ -99,7 +101,7 @@ public class MainMenu {
     }
 
     private static void getPage(int pageNo) {
-        result = processedTicketList.listTickets(perPageLimit, pageNo);
+        result = ticketController.displayTicketList(perPageLimit, pageNo, processedTicketList);
         if(!result.equals("SUCCESS")){
             System.out.println(result);
         }

@@ -3,6 +3,7 @@ package driver.controller;
 import driver.auth.Auth;
 import driver.mapper.TicketMapper;
 import driver.model.Ticket;
+import driver.service.ProcessedTicketList;
 
 public class TicketController {
 
@@ -25,16 +26,25 @@ public class TicketController {
             Ticket ticket = jsonParser.parseOneTicket(response);
             if(ticket == null)
                 return "Provided ticket could not be parsed";
+            ProcessedTicketList processedTicketList = new ProcessedTicketList();
+            processedTicketList.displayHeader();
+            processedTicketList.displayTickets(ticket);
 
-            displayInformation(ticket);
             return "SUCCESS";
         }
 
         return httpRequest.displayErrorMessage(Auth.responseCode);
     }
 
-    private void displayInformation(Ticket ticket) {
-        System.out.println(ticket.toString());
+    public String displayTicketList(int perPageLimit, int pageNo, ProcessedTicketList processedTicketList){
+        String response = processedTicketList.listTickets(perPageLimit, pageNo);
+        processedTicketList.displayTicketsList();
+        processedTicketList.displayPageNo(pageNo);
+        return response;
     }
+
+    /*private void displayInformation(Ticket ticket) {
+        System.out.println(ticket.toString());
+    }*/
 
 }

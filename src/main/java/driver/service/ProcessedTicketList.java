@@ -36,16 +36,50 @@ public class ProcessedTicketList {
             this.isNext = processedTicketList.isNext;
             this.isPrevious = processedTicketList.isPrevious;
 
-            for(int i=0; i<tickets.length; i++)
-                System.out.println(tickets[i]);
+            /*for(int i=0; i<tickets.length; i++)
+                System.out.println(tickets[i]);*/
 
             return "SUCCESS";
         }
 
         //display the results
-
         return Auth.displayErrorMessage(Auth.responseCode) ;
 
+    }
+
+    public void displayTicketsList(){
+        displayHeader();
+        for(int i =0;i <tickets.length; i++){
+            displayTickets(tickets[i]);
+        }
+    }
+
+    public void displayTickets(Ticket ticket){
+
+        String subject = "";
+        String description = "";
+
+        if(ticket.getSubject().length() >20)
+            subject = stringFormatter(ticket.getSubject(), 20);
+        if(ticket.getSubject().length() >40)
+            description = stringFormatter(ticket.getDescription(), 40);
+
+        System.out.format("| %-10s | %-10s | %-10s | %-40s | %-50s | %-10s |\n", ticket.getId(), ticket.getStatus(), ticket.getPriority() , subject, description, ticket.getCreatedAt());
+    }
+
+    public void displayHeader(){
+        System.out.println(" ------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.format("| %-10s | %-10s | %-10s | %-10s | %-10s | %-10s |\n", "ID", "Status","Priority", "Subject" ,"Description", "Created");
+        System.out.println(" ------------------------------------------------------------------------------------------------------------------------------------");
+    }
+
+    public void displayPageNo(int page){
+        System.out.println("Page No: "+page);
+    }
+
+    public String stringFormatter(String str, int limiter){
+            str = str.substring(0,limiter) + "...";
+            return str;
     }
 
 }
