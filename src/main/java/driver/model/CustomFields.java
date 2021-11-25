@@ -1,5 +1,8 @@
 package driver.model;
 
+/**
+ * Model class for CustomFields
+ */
 public class CustomFields {
     private long id;
     private String value;

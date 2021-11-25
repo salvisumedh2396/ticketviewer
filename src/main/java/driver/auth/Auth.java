@@ -3,7 +3,6 @@ package driver.auth;
 import java.net.*;
 import java.io.*;
 import java.util.Base64;
-import java.util.Date;
 import java.util.Properties;
 
 public class Auth {
@@ -13,8 +12,12 @@ public class Auth {
     private static String userName = "";
     private static String password = "";
     private static String subDomain = "";
+
     InputStream inputStream;
 
+    /**
+     * This method gets the credentials (username, password, subdomain) from the properties file
+     */
     public void getCredentials(){
 
         try {
@@ -45,6 +48,12 @@ public class Auth {
         }
     }
 
+    /**
+     * This method is used to send a connection request and get ticket details as and when required
+     * @param url - part of the url that decides what data will be returned back by the api call
+     * @param urlParams - parameters to specify/add condition on the data that is being retrieved
+     * @return return either the data that was requested or the error response that was received
+     */
     public String requestResponse(String url, String urlParams){
 
         HttpURLConnection connection = null;
@@ -97,6 +106,11 @@ public class Auth {
         }
     }
 
+    /**
+     * This method is used to return an error message based on the received error code
+     * @param responseCode - HttpRequest reponse which decides the actual cause of error
+     * @return error response based on the response code that was recceived
+     */
     public static String displayErrorMessage(int responseCode) {
         switch(responseCode)
         {
@@ -115,7 +129,7 @@ public class Auth {
             case 504:
                 return "Gateway Timeout -  the server is a not receiving a response from the backend servers within the allowed time period";
             default:
-                return "This is new..!! Please try again after sometime..!!";
+                return "This is new..!! Sorry for the convenience Please try again after sometime..!!";
         }
     }
 }

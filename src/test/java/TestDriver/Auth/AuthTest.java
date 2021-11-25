@@ -9,6 +9,9 @@ import static org.junit.Assert.assertEquals;
 
 public class AuthTest {
 
+    /**
+     * Checks if a successful call is made for the details of a single ticket
+     */
     @Test
     public void viewSingleTicket(){
         Auth singleTicketRequest = new Auth();
@@ -16,6 +19,9 @@ public class AuthTest {
         assertEquals(200, Auth.responseCode);
     }
 
+    /**
+     * Checks if a successful call is made for trhe retrieval of ticket list
+     */
     @Test
     public void viewTicketList(){
         Auth ticketListRequest = new Auth();
@@ -23,6 +29,9 @@ public class AuthTest {
         assertEquals(200,Auth.responseCode);
     }
 
+    /**
+     * Checks if the code provides an appropriate response when a request made is invalid
+     */
     @Test
     public void sendAnInvalidRequest(){
         Auth invalidRequest = new Auth();
@@ -30,6 +39,10 @@ public class AuthTest {
         assertEquals("Not Found - very few people reach this page..!!",response);
     }
 
+    /**
+     * Check if creadentials are retrieved successfully
+     * @throws IOException
+     */
     @Test
     public void getCredentials() throws IOException {
         Auth auth = new Auth();

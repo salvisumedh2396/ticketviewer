@@ -8,6 +8,9 @@ import static org.junit.Assert.assertEquals;
 
 public class TicketControllerTest {
 
+    /**
+     * Check for a successful retrieval of single ticket
+     */
     @Test
     public void recordSingleTicketResponse(){
         TicketController singleTicket = new TicketController();
@@ -15,6 +18,9 @@ public class TicketControllerTest {
         assertEquals("SUCCESS", response);
     }
 
+    /**
+     * Checks for a successful retrieval of ticket list
+     */
     @Test
     public void recordMultipleTicketResponse(){
         TicketController multipleTickets = new TicketController();

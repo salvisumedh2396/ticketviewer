@@ -100,6 +100,9 @@ public class MainMenu {
         }
     }
 
+    /**
+     * @param pageNo - check if a page is available to display
+     */
     private static void getPage(int pageNo) {
         result = ticketController.displayTicketList(perPageLimit, pageNo, processedTicketList);
         if(!result.equals("SUCCESS")){
@@ -110,6 +113,9 @@ public class MainMenu {
         paginationMenu();
     }
 
+    /**
+     * Display pagination menu
+     */
     private static void paginationMenu(){
         displayMenu = false;
         System.out.println("\nEnter 'n' to move to next page");
@@ -118,6 +124,9 @@ public class MainMenu {
         System.out.println("Enter 'back' to go to the main menu");
     }
 
+    /**
+     * Dispaly main menu
+     */
     private static void displayMenu(){
         System.out.println("\n============== Welcome to Zendesk Ticket Viewer System ============");
         System.out.println("Please select one of the options:");
