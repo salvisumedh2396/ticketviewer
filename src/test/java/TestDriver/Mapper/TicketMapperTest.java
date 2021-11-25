@@ -49,6 +49,14 @@ public class TicketMapperTest {
         assertEquals(null,ticketList);
     }
 
+    @Test
+    public void parseEmptyTicketList(){
+        String jsonContent = "{\"tickets\":[],\"next_page\":null,\"previous_page\":\"https://zcctcviewer.zendesk.com/api/v2/tickets.json?page=1000\",\"count\":150}";
+        TicketMapper parseTicket = new TicketMapper();
+        ProcessedTicketList processedTicketList = new ProcessedTicketList();
 
+        processedTicketList = parseTicket.parseAllTickets(jsonContent);
+        assertEquals(null, processedTicketList);
+    }
 
 }

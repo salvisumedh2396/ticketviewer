@@ -29,15 +29,11 @@ public class Auth {
                 throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
             }
 
-            Date time = new Date(System.currentTimeMillis());
-
             // get the property value and print it out
             userName = prop.getProperty("username");
             password = prop.getProperty("password");
             subDomain = prop.getProperty("domain");
 
-            //String result = "Company List = " + userName + ", " + password + ", " + subDomain;
-            //System.out.println(result + "\nProgram Ran on " + time + " by user=" + userName);
         } catch (Exception e) {
             System.out.println("Exception: " + e.getMessage());
         } finally {
