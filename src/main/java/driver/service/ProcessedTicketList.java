@@ -12,6 +12,12 @@ public class ProcessedTicketList {
 
     private static String ENDPOINT = "/api/v2/tickets.json";
 
+    /**
+     * Display the tickets
+     * @param perPageLimit number of ticket details that are to be diaplayed per request
+     * @param pageNo - count of page number.
+     * @return reponse that indicates success or prints error.
+     */
     public String listTickets(int perPageLimit, int pageNo){
 
         if(pageNo < 1){
@@ -45,6 +51,9 @@ public class ProcessedTicketList {
 
     }
 
+    /**
+     * Displays the list of tickets
+     */
     public void displayTicketsList(){
         displayHeader();
         for(int i =0;i <tickets.length; i++){
@@ -52,6 +61,10 @@ public class ProcessedTicketList {
         }
     }
 
+    /**
+     * Display ticket details
+     * @param ticket - ticket object that contains all the ticket details
+     */
     public void displayTickets(Ticket ticket){
 
         String subject = "";
@@ -65,6 +78,9 @@ public class ProcessedTicketList {
         System.out.format("| %-10s | %-10s | %-10s | %-40s | %-50s | %-10s |\n", ticket.getId(), ticket.getStatus(), ticket.getPriority() , subject, description, ticket.getCreatedAt());
     }
 
+    /**
+     * Display header
+     */
     public void displayHeader(){
         System.out.println(" ------------------------------------------------------------------------------------------------------------------------------------");
         System.out.format("| %-10s | %-10s | %-10s | %-10s | %-10s | %-10s |\n", "ID", "Status","Priority", "Subject" ,"Description", "Created");

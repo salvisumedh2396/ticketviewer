@@ -7,6 +7,9 @@ import static org.junit.Assert.assertEquals;
 
 public class ProcessedTicketListTest {
 
+    /**
+     * parse a list of ticket from json input
+     */
     @Test
     public void processTicketList(){
         ProcessedTicketList processedTicketList = new ProcessedTicketList();

@@ -10,6 +10,11 @@ public class TicketMapper {
 
     private static final int maxPageLimit = 25;
 
+    /**
+     * Takes json as an input and converts it into a data that can be inserted into Ticket object
+     * @param jsonContent - Takes the Json content and returns the data in the form of Ticket object
+     * @return Ticket object which holds all the details of the requested ticket
+     */
     public Ticket parseOneTicket(String jsonContent){
         try{
             JSONObject ticketEntities = new JSONObject(jsonContent);
@@ -26,6 +31,11 @@ public class TicketMapper {
         }
     }
 
+    /**
+     * Returns a list of tickets
+     * @param jsonResponse - contains ticket data in json format
+     * @return returns an object which contains an array of lists
+     */
     public ProcessedTicketList parseAllTickets(String jsonResponse){
 
         ProcessedTicketList processedTicketList = new ProcessedTicketList();
@@ -67,6 +77,11 @@ public class TicketMapper {
         }
     }
 
+    /**
+     * Converts json object to ticket object
+     * @param ticketContent json object which contains ticket details
+     * @return a ticket object
+     */
     public Ticket jsonToTicketMapper(JSONObject ticketContent){
         Ticket ticket = new Ticket();
 
@@ -126,6 +141,11 @@ public class TicketMapper {
         return ticket;
     }
 
+    /**
+     * Logic to perform pagination in CLI
+     * @param processedTicketList contains isNext and isPrevious bollean which indicates if any further or previous page is available to access
+     * @param jsonTicketObject json object which contains ticket details
+     */
     private void paginationCheck(ProcessedTicketList processedTicketList, JSONObject jsonTicketObject){
         String nextPageUrl = jsonTicketObject.optString("next_page");
         String previousPageUrl = jsonTicketObject.optString("previous_page");
