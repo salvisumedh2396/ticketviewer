@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad72ce88-4000-4de7-a77c-fea77782f7fa" name="Default Changelist" comment="" />
+    <list default="true" id="ad72ce88-4000-4de7-a77c-fea77782f7fa" name="Default Changelist" comment="#8 Added an edge test case for ticketMapper class">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cred.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cred.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +19,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,10 +35,12 @@
     </option>
   </component>
   <component name="ProjectId" id="21CJD3rbxGqDc5kb9StjCOSqGP5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/img" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -40,6 +54,94 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.TicketMapperTest.parseOneTicket">
+    <configuration name="MainMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="driver.MainMenu" />
+      <module name="ticketviewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="driver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketControllerTest.recordMultipleTicketResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticketviewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestDriver.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestDriver.Controller" />
+      <option name="MAIN_CLASS_NAME" value="TestDriver.Controller.TicketControllerTest" />
+      <option name="METHOD_NAME" value="recordMultipleTicketResponse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketMapperTest.parseEmptyTicketList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticketviewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestDriver.Mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestDriver.Mapper" />
+      <option name="MAIN_CLASS_NAME" value="TestDriver.Mapper.TicketMapperTest" />
+      <option name="METHOD_NAME" value="parseEmptyTicketList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketMapperTest.parseOneTicket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticketviewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestDriver.Mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestDriver.Mapper" />
+      <option name="MAIN_CLASS_NAME" value="TestDriver.Mapper.TicketMapperTest" />
+      <option name="METHOD_NAME" value="parseOneTicket" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketMapperTest.parseTicketList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ticketviewer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestDriver.Mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestDriver.Mapper" />
+      <option name="MAIN_CLASS_NAME" value="TestDriver.Mapper.TicketMapperTest" />
+      <option name="METHOD_NAME" value="parseTicketList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TicketMapperTest.parseOneTicket" />
+        <item itemvalue="Application.MainMenu" />
+        <item itemvalue="JUnit.TicketMapperTest.parseEmptyTicketList" />
+        <item itemvalue="JUnit.TicketMapperTest.parseTicketList" />
+        <item itemvalue="JUnit.TicketControllerTest.recordMultipleTicketResponse" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -50,11 +152,98 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637439013004</updated>
-      <workItem from="1637439016614" duration="14260000" />
+      <workItem from="1637439016614" duration="92214000" />
     </task>
+    <task id="LOCAL-00001" summary="#2 Added service, controller classes, added some logic to mainMenu">
+      <created>1637539173032</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637539173032</updated>
+    </task>
+    <task id="LOCAL-00002" summary="#3 Added logic to print all tickets">
+      <created>1637553742808</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637553742808</updated>
+    </task>
+    <task id="LOCAL-00003" summary="#5 Added blank test classes, display methods and cosmetic changes">
+      <created>1637729569382</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637729569382</updated>
+    </task>
+    <task id="LOCAL-00004" summary="#6 Added test cases for controller, auth, mapper and service package classes">
+      <created>1637765486976</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637765486976</updated>
+    </task>
+    <task id="LOCAL-00005" summary="#7 Added logic to load user credentials through properties file">
+      <created>1637769156069</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637769156069</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#8 Added an edge test case for ticketMapper class">
+      <created>1637803088361</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637803088361</updated>
+    </task>
+    <task id="LOCAL-00007" summary="#9 Added comments to classes">
+      <created>1637818498775</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637818498776</updated>
+    </task>
+    <task id="LOCAL-00008" summary="#10 Added sample cred.properties file">
+      <created>1637933459162</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637933459162</updated>
+    </task>
+    <task id="LOCAL-00009" summary="#11 Added plugins to automatically create jar using certain commands">
+      <created>1637937960415</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637937960415</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#2 Added service, controller classes, added some logic to mainMenu" />
+    <MESSAGE value="#3 Added logic to print all tickets" />
+    <MESSAGE value="#5 Added blank test classes, display methods and cosmetic changes" />
+    <MESSAGE value="#6 Added test cases for controller, auth, mapper and service package classes" />
+    <MESSAGE value="#7 Added logic to load user credentials through properties file" />
+    <MESSAGE value="#8 Added an edge test case for ticketMapper class" />
+    <MESSAGE value="#9 Added comments to classes" />
+    <MESSAGE value="#10 Added sample cred.properties file" />
+    <MESSAGE value="#11 Added plugins to automatically create jar using certain commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="#11 Added plugins to automatically create jar using certain commands" />
   </component>
 </project>
