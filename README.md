@@ -12,6 +12,16 @@
 - IDE used : Intellij
 - OS used and tested on : Windows 10
 
+## New to Java..??
+1. Install Java 7 or higher from here: https://www.java.com/en/download/manual.jsp
+2. Install java JDK from here: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html?
+3. Add JDK path 
+4. Windows: First determine the location of your JDK bin. Typically this will be C:\Program Files\Java\bin followed by the JDK directory.
+	- Enter control Panel -> System and Security -> System -> Advanced System Settings
+	- Click 'Environment Variables' button
+	- find the PATH environment variable and select it -> Click Edit. If the PATH environment variable does not exist, click New.
+	- In the Edit System Variable (or New System Variable) window, specify the value of the PATH environment variable. Click OK. Close all remaining windows by clicking OK.
+
 ## Usage Instructions:
 1. Download the project from github to you computer, extract the project to any folder.
 2. If you are using an IDE like Intellij then:
