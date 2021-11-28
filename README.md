@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/salvisumedh2396/ticketviewer)
 ![Lines of code](https://img.shields.io/tokei/lines/github/salvisumedh2396/ticketviewer)
+![Build Status](https://github.com/salvisumedh2396/ticketviewer/actions/workflows/maven.yml/badge.svg)
 
 ## Development Environment Used and Dependencies:
 - Java (Version 9 or higher)
