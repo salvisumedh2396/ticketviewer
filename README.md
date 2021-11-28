@@ -29,15 +29,60 @@
    - open the project in the IDE, 
    - If prompted to, set the Java configurations to version 9
    - Add your zendesk credentials (username, password, subdomain) to the cred.properties file as shown in image (a)
+   ![cred location](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/1.PNG)
+   ![entries to make](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/2.PNG)
    - Make sure that you have atleast some tickets added in your account, without this the project will still run and display appropriate messages but you might receive some errors in the test suite.
    - Run the MainMenu.java file as Java application and you are good to go..!!
 4. If you are working through CLI then,
    - Open the comman line interface (CLI), go to your project folder and navigate to src/main/resources. Here you will find the cred.properties file. Open this file, and your zendesk credentials (username, password, subdomain)
    - Once you have entered the credentials, go back to your main project folder. (inside the ticketviewer project) and type or copy paste the following command:
    `mvn clean compile assembly:single`
+   ![mvn compile cmd](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/3.PNG)
    This will run a series of steps to build your project and create a jar file. At the end, if everything goes well, you will receive a 'BUILD SUCCESS' message. 
+   ![build success](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/4.PNG)
    -  After this, a jar will be generated in your target folder. Use the following command to run the project:
    `java -jar .\target\ticketviewer-1.0-SNAPSHOT-jar-with-dependencies.jar`
    OR
    `java -jar .\target\{name of your jar}.jar`
+   ![run application](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/5.PNG)
    - This will start the ticketViewer system. Have fun using it..!!
+
+## Features:
+### View All tickets:
+In CLI enter option 2, to view a list of first 25 tickets in your dashboard.
+
+![run application](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/6.PNG)
+
+### Pagination:
+To view further tickets (next page) enter 'n' (next) and for previous enter 'p' (previous page)
+
+*Next page:*
+
+![run application](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/7.PNG)
+
+*Previous page*
+
+![run application](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/8.PNG)
+
+### Ease of accessibility:
+To view single ticket info, you don't need to go back and forth thoruhg the system..!! In the list all tickets menu, type '1' to view details of single ticket by entering ticket id.
+
+![run application](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/9.PNG)
+
+Press back to go to the main menu.
+
+### View single ticket:
+To view single ticket info, press '1'. Then enter the ticket id for which you want to view details.
+
+![run application](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/10.PNG)
+
+To exit the system type 'quit'
+
+![run application](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/11.PNG)
+
+### Error Handling:
+Many error types have been handled.
+
+![run application](https://github.com/salvisumedh2396/ticketviewer/blob/master/docs/img/12.PNG)
+
+
