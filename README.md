@@ -105,7 +105,7 @@ The above system is my attempt at doing all I could beofre the start of my final
 - Displaying all/more data.
 
 ## A note of thanks:
-I woudl like to thank Zendesk for giving me this opportunity. It was a great learning experience and I hope to see more such challenges in the future..!!
+I would like to thank Zendesk for giving me this opportunity. It was a great learning experience and I hope to see more such challenges in the future..!!
 
 ## Support:
 If you face any issues, feel free to contact me on my mail id salvisumedh2396@gmail.com . Please do provide what the issue is, steps to reach that issue and if possible a screenshot of the error. That would help me pinpoint your issue accurately..!!
