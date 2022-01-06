@@ -98,9 +98,9 @@ Many error types have been handled.
 
 ## Future Scope:
 The above system is my attempt at doing all I could beofre the start of my final exams..!! There is still a lot of scope that can be added to the project that includes but not limited to:
-- Adding OAuth authentication instead of basic.
+- Adding token based authentication instead of basic.
 - Developing a frontend to improve User experience.
-- Taking user credentials from the user instead of making the user add these to the proeprties file.
+- Taking user credentials from the user instead of making the user add these to the properties file.
 - Adding add,update and delete operations.
 - Adding more test coverage to include all scenarios.
 - Displaying all/more data.
